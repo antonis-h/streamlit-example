@@ -5,6 +5,8 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 
+echo "backend: TkAgg" >> ~/.matplotlib/matplotlibrc
+
 st.write("""
 ## Superstore Dataset
 """)
@@ -23,7 +25,7 @@ day_chosen = st.sidebar.selectbox('Choose a day', days)
 sales_day = data[data['Order Date'].dt.day_name() == f'{day_chosen}']
 
 fig = plt.plot(sales_day['Order Date'],sales_day['Sales'].rolling(300).mean(),'x')
-#st.pyplot(fig)
+st.pyplot(fig)
 
 click = st.button("Don't press too hard")
 
