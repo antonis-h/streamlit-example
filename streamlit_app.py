@@ -24,7 +24,7 @@ sales_day = data[data['Order Date'].dt.day_name() == f'{day_chosen}']
 
 fig = plt.plot(sales_day['Order Date'],sales_day['Sales'].rolling(300).mean(),'x')
 plt.title(f'{day_chosen} Sales')
-st.pyplot(fig)
+st.pyplot()
 
 click = st.button("Don't press too hard")
 
