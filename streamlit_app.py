@@ -6,7 +6,7 @@ import streamlit as st
 
 st.title('Experimenting with Streamlit')
 
-click = st.button("Don't press too hard")
+click = st.button("Don't press too hard, :cry:")
 
 if click:
     st.write('Oucchhh ')
