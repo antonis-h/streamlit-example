@@ -3,8 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-#import matplotlib.pyplot as plt
-%matplotlib inline
+import matplotlib.pyplot as plt
 
 st.write("""
 ## Superstore Dataset
@@ -24,7 +23,7 @@ data['Order Date'] = pd.to_datetime(data['Order Date'], format = '%m/%d/%Y')
 # sales_day = data[data['Order Date'].dt.day_name() == f'{day_chosen}']
 
 # fig = plt.plot(sales_day['Order Date'],sales_day['Sales'].rolling(300).mean(),'x')
-# st.plotly_chart(fig)
+# st.pyplot(fig)
 
 click = st.button("Don't press too hard")
 
