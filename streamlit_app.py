@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 
 st.write("""
-## Checking the buttons :cry:
+## Checking the buttons
 
 Go ahead and experiment!
 """)
@@ -20,9 +20,11 @@ st.title('Experimenting with Streamlit')
 click = st.button("Don't press too hard")
 
 if click:
-    st.write('Oucchhh ')
+    st.write(""""
+    Ouchhh :cry:
+    """)
     
     
 this = st.text_input('What')
 
-st.title(this)
+st.write(this)
