@@ -2,3 +2,4 @@ altair
 pandas
 streamlit
 matplotlib
+echo "backend: TkAgg" >> ~/.matplotlib/matplotlibrc
