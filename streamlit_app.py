@@ -12,7 +12,8 @@ Go ahead and experiment!
 
 with st.sidebar:
     st.write('External features')
-    box = st.checkbox('Option 1')
+    for i in range(5):
+        box = st.checkbox(f'Option {i}')
 
 st.title('Experimenting with Streamlit')
 
