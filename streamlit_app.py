@@ -5,10 +5,14 @@ import pandas as pd
 import streamlit as st
 
 st.write("""
-##Checking the buttons :cry:
+## Checking the buttons :cry:
 
 Go ahead and experiment!
 """)
+
+with st.sidebar:
+    st.write('External features')
+    box = st.checkbox('Option 1')
 
 st.title('Experimenting with Streamlit')
 
