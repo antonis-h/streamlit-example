@@ -17,13 +17,13 @@ with st.sidebar:
 data = pd.read_csv("https://raw.githubusercontent.com/jeaggo/tc3068/master/Superstore.csv")
 data['Order Date'] = pd.to_datetime(data['Order Date'], format = '%m/%d/%Y')
 
-# st.title('Daily Sales')
-# days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-# day_chosen = st.sidebar.selectbox('Choose a day', days)
-# sales_day = data[data['Order Date'].dt.day_name() == f'{day_chosen}']
+st.title('Daily Sales')
+days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+day_chosen = st.sidebar.selectbox('Choose a day', days)
+sales_day = data[data['Order Date'].dt.day_name() == f'{day_chosen}']
 
-# fig = plt.plot(sales_day['Order Date'],sales_day['Sales'].rolling(300).mean(),'x')
-# st.pyplot(fig)
+fig = plt.plot(sales_day['Order Date'],sales_day['Sales'].rolling(300).mean(),'x')
+st.pyplot(fig)
 
 click = st.button("Don't press too hard")
 
