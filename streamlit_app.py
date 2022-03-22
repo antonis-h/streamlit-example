@@ -22,9 +22,9 @@ days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sun
 day_chosen = st.sidebar.selectbox('Choose a day', days)
 sales_day = data[data['Order Date'].dt.day_name() == f'{day_chosen}']
 
-fig, ax = plt.subplot()
+fig, ax = plt.subplots(1,1,figsize=[10,10])
 ax.plot(sales_day['Order Date'],sales_day['Sales'].rolling(300).mean(),'x')
-# plt.title(f'{day_chosen} Sales')
+plt.title(f'{day_chosen} Sales')
 st.pyplot(fig)
 
 click = st.button("Don't press too hard")
